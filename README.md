@@ -27,13 +27,13 @@ The game features smooth movement, apple collection, scoring system, and collisi
 ---
 
 ## 🏗️ Project Structure
-📁 SnakeGame
-├── GameFrame.java
-├── GamePanel.java
-├── GameObject.java
-├── Apple.java
-└── SnakeGame.java
 
+SnakeGame/
+- GameFrame.java
+- GamePanel.java
+- GameObject.java
+- Apple.java
+- SnakeGame.java
 ---
 
 ## 📦 Requirements
