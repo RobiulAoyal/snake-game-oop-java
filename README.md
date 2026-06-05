@@ -27,3 +27,31 @@ The game features smooth movement, apple collection, scoring system, and collisi
 ---
 
 ## 🏗️ Project Structure
+SnakeGame/
+├── GameFrame.java
+├── GamePanel.java
+├── GameObject.java
+├── Apple.java
+├── SnakeGame.java
+
+
+---
+
+## 📦 Requirements
+
+- ☕ Java JDK 8 or higher  
+- 🖥️ Any Java IDE (Eclipse / IntelliJ / VS Code)  
+- 📚 Built using Java Swing (no external libraries required)
+
+---
+
+## 🎯 Controls
+
+| Key | Action |
+|-----|--------|
+| ⬆️ | Move Up |
+| ⬇️ | Move Down |
+| ⬅️ | Move Left |
+| ➡️ | Move Right |
+
+
