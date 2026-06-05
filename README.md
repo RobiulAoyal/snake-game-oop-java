@@ -1,4 +1,4 @@
-# 🐍 Snake Game (Java Swing)
+# 🐍 Snake Game 
 
 A classic **desktop Snake game** built using **Java Swing** and **Object-Oriented Programming (OOP)** principles.  
 The game features smooth movement, apple collection, scoring system, and collision detection.
