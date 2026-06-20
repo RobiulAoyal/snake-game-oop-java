@@ -24,7 +24,7 @@ public class GamePanel extends JPanel implements ActionListener {
 	GamePanel() {
 		random = new Random();
 		this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
-		this.setBackground(Color.black);
+		this.setBackground(Color.cyan);
 		this.setFocusable(true);
 		this.addKeyListener(new MyKeyAdapter());
 		startGame();
@@ -46,16 +46,16 @@ public class GamePanel extends JPanel implements ActionListener {
 	public void draw(Graphics g) {
 		if (running) {
 
-			for (int i = 0; i < SCREEN_HEIGHT / UNIT_SIZE; i++) {
+			/*for (int i = 0; i < SCREEN_HEIGHT / UNIT_SIZE; i++) {
 				g.drawLine(i * UNIT_SIZE, 0, i * UNIT_SIZE, SCREEN_HEIGHT);
 				g.drawLine(0, i * UNIT_SIZE, SCREEN_WIDTH, i * UNIT_SIZE);
-			}
+			}*/
 
 			apple.draw(g);
 			for (int i = 0; i < bodyParts; i++) {
 				if (i == 0) {
 					g.setColor(Color.green);
-					g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
+					g.fillOval(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
 				} else {
 					// g.setColor(new Color(45, 180, 0)); Single Color Snake
 					g.setColor(new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255)));// Multi Color
