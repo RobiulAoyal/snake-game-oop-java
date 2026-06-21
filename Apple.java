@@ -10,6 +10,6 @@ public class Apple extends GameObject {
     @Override
     public void draw(Graphics g) {
         g.setColor(Color.red);
-        g.fillOval(x, y, GamePanel.UNIT_SIZE, GamePanel.UNIT_SIZE);
+        g.fillOval(getX(), getY(), GamePanel.UNIT_SIZE, GamePanel.UNIT_SIZE);
     }
 }
