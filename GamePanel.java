@@ -51,7 +51,7 @@ public class GamePanel extends JPanel implements ActionListener {
 				g.drawLine(0, i * UNIT_SIZE, SCREEN_WIDTH, i * UNIT_SIZE);
 			}*/
 
-			apple.draw(g);
+			gameObj.draw(g);
 			for (int i = 0; i < bodyParts; i++) {
 				if (i == 0) {
 					g.setColor(Color.green);
@@ -103,7 +103,7 @@ public class GamePanel extends JPanel implements ActionListener {
 	}
 
 	public void checkApple() {
-		if (x[0] == apple.getX() && y[0] == apple.getY()) {
+		if (x[0] == gameObj.getX() && y[0] == gameObj.getY()) {
 			bodyParts++;
 			applesEaten++;
 			newApple();
