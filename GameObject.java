@@ -1,8 +1,8 @@
 import java.awt.Graphics;
 
 public abstract class GameObject {
-    protected int x;
-    protected int y;
+    private int x;
+    private int y;
 
     public GameObject(int x, int y) {
         this.x = x;
