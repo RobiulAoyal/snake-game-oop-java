@@ -33,6 +33,7 @@ SnakeGame/
 - GamePanel.java
 - GameObject.java
 - Apple.java
+- Orange.java
 - SnakeGame.java
 ---
 
