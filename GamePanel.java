@@ -3,8 +3,6 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.Random;
 
-import javax.swing.JPanel;
-
 public class GamePanel extends JPanel implements ActionListener {
 	static final int SCREEN_WIDTH = 600;
 	static final int SCREEN_HEIGHT = 600;
@@ -32,6 +30,7 @@ public class GamePanel extends JPanel implements ActionListener {
 
 	public void startGame() {
 		gameObj = new Apple(0, 0);
+		/*gameObj = new Orange(0, 0);*/
 		newApple();
 		running = true;
 		timer = new Timer(DELAY, this);
@@ -79,7 +78,12 @@ public class GamePanel extends JPanel implements ActionListener {
 
 		gameObj.setPosition(x, y);
 	}
+    public void newOrange() {
+		int x = random.nextInt(SCREEN_WIDTH / UNIT_SIZE) * UNIT_SIZE;
+		int y = random.nextInt(SCREEN_HEIGHT / UNIT_SIZE) * UNIT_SIZE;
 
+		gameObj.setPosition(x, y);
+	}
 	public void move() {
 		for (int i = bodyParts; i > 0; i--) {
 			x[i] = x[i - 1];
@@ -106,10 +110,17 @@ public class GamePanel extends JPanel implements ActionListener {
 		if (x[0] == gameObj.getX() && y[0] == gameObj.getY()) {
 			bodyParts++;
 			applesEaten++;
+			if(applesEaten%2==1){
+				gameObj = new Orange(0, 0);
+				newOrange();
+			}
+			else{
+			gameObj = new Apple(0, 0);
 			newApple();
 		}
 
 	}
+}
 
 	public void checkCollisions() {
 		// check if head collides with body
